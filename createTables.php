@@ -17,18 +17,12 @@ include 'includes/config.inc.php';
 include 'includes/classLoader.php';
 
 
-?>
-	<br><br><br>
+// KLassen - Objekt erzeugen
+$hDimari = new Dimari($host, $username, $password, $myMySQLHost, $myMySQLUsername, $myMySQLPassword, $myMySQLDBName);
 
 
-	Tabellen und Felder anlegen: <a href="createTables.php">HIER</a>
-
-	<br><br><br>
-
-	Eine Tabelle importieren: <a href="importTables.php">HIER</a>
-
-<?php
-
+// Initial Methode aufrufen:
+$hDimari->initialGetDimariDBStructur();
 
 
 // Debug ausgeben:
